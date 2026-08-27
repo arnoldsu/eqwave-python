@@ -4,6 +4,12 @@ A Python workflow for Wheeler–Kiladis precipitation spectra, Kelvin and equato
 
 Data are not distributed with this repository.
 
+## Example output
+
+![Five-model equatorial-wave comparison](examples/Panel_EQ-Wave_OBS-ITM_ACCESS-CM2_multi_python.png)
+
+The upper panels compare the observed and ACCESS-CM2 symmetric wavenumber–frequency spectra. The lower panel compares ten precipitation-based equatorial-wave skill metrics for ACCESS-CM2, ACCESS-ESM1-5, HadGEM3-GC31-LL, KACE-1-0-G, and UKESM1-0-LL.
+
 ## Required data
 
 Each model needs global daily precipitation with:
