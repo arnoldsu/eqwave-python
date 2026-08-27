@@ -10,6 +10,32 @@ Data are not distributed with this repository.
 
 The upper panels compare the observed and ACCESS-CM2 symmetric wavenumber–frequency spectra. The lower panel compares ten precipitation-based equatorial-wave skill metrics for ACCESS-CM2, ACCESS-ESM1-5, HadGEM3-GC31-LL, KACE-1-0-G, and UKESM1-0-LL.
 
+
+### Bottom-panel metrics
+
+| Number | Label | Diagnostic |
+|---:|---|---|
+| 01 | Eastward | Agreement with the observed eastward-propagating symmetric precipitation spectrum (positive zonal wavenumbers). |
+| 02 | Westward | Agreement with the observed westward-propagating symmetric precipitation spectrum (negative zonal wavenumbers). |
+| 03 | EK [MAM] | Equatorial Kelvin-wave precipitation-variance skill for March–May. |
+| 04 | EK [JJA] | Equatorial Kelvin-wave precipitation-variance skill for June–August. |
+| 05 | EK [SON] | Equatorial Kelvin-wave precipitation-variance skill for September–November. |
+| 06 | EK [DJF] | Equatorial Kelvin-wave precipitation-variance skill for December–February. |
+| 07 | ER [MAM] | Equatorial Rossby-wave precipitation-variance skill for March–May. |
+| 08 | ER [JJA] | Equatorial Rossby-wave precipitation-variance skill for June–August. |
+| 09 | ER [SON] | Equatorial Rossby-wave precipitation-variance skill for September–November. |
+| 10 | ER [DJF] | Equatorial Rossby-wave precipitation-variance skill for December–February. |
+
+The Eastward and Westward metrics compare selected regions of the normalized wavenumber–frequency spectrum. The EK and ER metrics compare the spatial patterns and amplitudes of seasonally grouped, wave-filtered precipitation variance between each model and the observational reference.
+
+Each metric uses the skill score:
+
+```text
+score = (1 + pattern_correlation)^4 / [4 (SDR + 1/SDR)^2]
+```
+
+Here, `SDR` is the model spatial standard deviation divided by the observed spatial standard deviation. A score approaches 1 when both spatial pattern and amplitude agree with observations; values approaching 0 indicate poor agreement. The horizontal 0.5 line is a visual reference, not a universal pass/fail threshold.
+
 ## Required data
 
 Each model needs global daily precipitation with:
