@@ -1,0 +1,24 @@
+#!/bin/bash
+#PBS -P PROJECT
+#PBS -q normal
+#PBS -l walltime=10:00:00,ncpus=1,mem=40GB,jobfs=10GB
+#PBS -l storage=gdata/PROJECT+scratch/PROJECT
+#PBS -l wd
+#PBS -j oe
+set -euo pipefail
+: "${MODEL:?Pass MODEL with qsub -v}"
+: "${RAW_FILES_FILE:?Text file containing one raw NetCDF path per line}"
+: "${OBS_ROOT:?Directory containing the obs subdirectory}"
+module purge
+module use /g/data/xp65/public/modules
+module load conda/analysis3
+export PYTHONNOUSERSITE=1
+code_dir=${PBS_O_WORKDIR}
+output_root=${OUTPUT_ROOT:-${PBS_JOBFS}/eqwave_${MODEL}}
+mapfile -t raw_files < "$RAW_FILES_FILE"
+mkdir -p "$output_root/obs" "$output_root/CMIP6/SpaceTime" "$output_root/CMIP6/Kr-filter" "$output_root/CMIP6/STScore" "$output_root/CMIP6/EQ-WaveScore"
+ln -s "$OBS_ROOT/obs/SpaceTime.obs.PRECT.nc" "$output_root/obs/SpaceTime.obs.PRECT.nc"
+ln -s "$OBS_ROOT/obs/kf_filter_GPCP.nc" "$output_root/obs/kf_filter_GPCP.nc"
+cd "$code_dir"
+python -u eqwave_pipeline.py all --model "$MODEL" --data-root "$output_root" --raw-files "${raw_files[@]}" --output "$output_root/Panel_EQ-Wave_OBS-${MODEL}.png"
+echo "Results: $output_root"
