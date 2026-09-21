@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22884295.svg)](https://doi.org/10.5281/zenodo.22884295)
 
-A Python workflow for Wheeler–Kiladis precipitation spectra, Kelvin and equatorial-Rossby filtered precipitation, skill-score NetCDF files, individual figures, and multi-model comparison panels. Precipitation-based equatorial-wave skill metrics are converted from Qiang's NCL scripts.
+A Python workflow for Wheeler–Kiladis precipitation spectra, Kelvin and equatorial-Rossby filtered precipitation, skill-score NetCDF files, individual figures, and multi-model comparison panels. Precipitation-based equatorial-wave skill metrics are converted from Qiang's NCL scripts, which were used in TaiESM model evaluation paper.
 
 Data are not distributed with this repository.
 
