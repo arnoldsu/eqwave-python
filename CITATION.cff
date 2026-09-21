@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+
+title: "CMIP6 Equatorial-Wave Diagnostics in Python"
+
+type: software
+
+authors:
+  - family-names: "Sullivan"
+    given-names: "Arnold"
+    orcid: "https://orcid.org/0000-0002-5712-6195"
+
+version: 1.0.0
+
+date-released: 2026-09-22
+
+repository-code: "https://github.com/arnoldsu/eqwave-python"
+
+keywords:
+  - equatorial waves
+  - tropical variability
+  - Wheeler-Kiladis spectrum
+  - Kelvin waves
+  - equatorial Rossby waves
+  - CMIP6
+  - climate models
+  - precipitation
+  - Python
