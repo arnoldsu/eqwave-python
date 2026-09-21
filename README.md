@@ -1,4 +1,6 @@
-# CMIP6 Equatorial-Wave Diagnostics
+# CMIP6 Equatorial-Wave Diagnostics in Python
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22884295.svg)](https://doi.org/10.5281/zenodo.22884295)
 
 A Python workflow for Wheeler–Kiladis precipitation spectra, Kelvin and equatorial-Rossby filtered precipitation, skill-score NetCDF files, individual figures, and multi-model comparison panels.
 
